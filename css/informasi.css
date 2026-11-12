@@ -1,0 +1,993 @@
+/* ========================================================
+   INFORMASI PERJALANAN — JELAJAH JOGJA
+   Harmonized with website color scheme:
+   --ink: #30231f;
+   --muted: #797069;
+   --paper: #f7f1e7;
+   --white: #fff;
+   --green: #6a2935;
+   --green-dark: #3a2024;
+   --orange: #b98c4e;
+   --line: #e1d7c8;
+   ======================================================== */
+
+/* --- SUB-NAVIGATION JUMP BAR --- */
+#transportasi,
+#waktu-musim,
+#etika-budaya,
+#kuliner-bahasa,
+#checklist,
+#faq,
+#darurat {
+  scroll-margin-top: 125px;
+}
+
+.info-subnav-sticky {
+  position: sticky;
+  top: 70px;
+  z-index: 15;
+  background: rgba(247, 241, 231, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  transition: box-shadow .25s ease;
+}
+
+.info-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 2px 0;
+}
+
+.info-subnav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.info-subnav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.info-subnav-pill:hover,
+.info-subnav-pill.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+
+.info-subnav-pill .pill-num {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* --- QUICK STATS / HIGHLIGHTS SECTION --- */
+.info-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: -48px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 48px;
+}
+
+.info-stat-box {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(48, 35, 31, 0.04);
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.info-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--orange);
+}
+
+.info-stat-box .stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f4eee5;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.info-stat-box strong {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  line-height: 1.25;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-stat-box p {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- SECTION HEADINGS & BADGES --- */
+.info-section-header {
+  margin-bottom: 40px;
+}
+
+.info-section-header.text-center {
+  text-align: center;
+}
+
+.info-section-header.text-center .eyebrow {
+  justify-content: center;
+}
+
+.info-section-header p.section-sub {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 14.5px;
+  margin-top: -6px;
+}
+
+.info-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.info-badge-primary {
+  background: rgba(106, 41, 53, 0.1);
+  color: var(--green);
+}
+
+.info-badge-gold {
+  background: rgba(185, 140, 78, 0.15);
+  color: #8c6328;
+}
+
+.info-badge-dark {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+/* --- TRANSPORT CARDS --- */
+.transport-block-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.transport-block-title h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0;
+  color: var(--ink);
+}
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.transport-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.transport-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(48, 35, 31, 0.07);
+}
+
+.transport-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.transport-card-icon {
+  width: 44px;
+  height: 44px;
+  background: #f5efe6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.transport-card h4 {
+  font-family: var(--serif);
+  font-size: 19px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.transport-card p.transport-desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.transport-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.transport-meta-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.transport-meta-item .meta-label {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.transport-meta-item .meta-value {
+  color: var(--ink);
+  font-weight: 700;
+  text-align: right;
+}
+
+.transport-tip-box {
+  background: #faf6f0;
+  border-left: 3px solid var(--orange);
+  padding: 10px 12px;
+  font-size: 11.5px;
+  color: #5d534b;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- SEASONALITY & CLIMATE CARDS --- */
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.season-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.season-card.season-dry {
+  border-top: 4px solid var(--orange);
+}
+
+.season-card.season-wet {
+  border-top: 4px solid var(--green);
+}
+
+.season-tag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.season-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.season-card p.season-lead {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.season-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.season-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.season-features li svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  stroke: var(--orange);
+}
+
+.season-card.season-wet .season-features li svg {
+  stroke: var(--green);
+}
+
+/* Cultural Calendar Ribbon */
+.event-calendar-box {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.event-calendar-box h4 {
+  font-family: var(--serif);
+  font-size: 21px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.event-calendar-box p.calendar-desc {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.event-card {
+  border-left: 2px solid var(--orange);
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card .event-month {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.event-card strong {
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.event-card span {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* --- ETIQUETTE & UNGGAH-UNGGUH SECTION --- */
+.etiquette-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.etiquette-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease;
+}
+
+.etiquette-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+}
+
+.etiquette-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f7f0e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: var(--green);
+}
+
+.etiquette-card h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.etiquette-card p {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.etiquette-pill-rule {
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  background: rgba(106, 41, 53, 0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+/* --- CULINARY & VOCABULARY SECTION --- */
+.culinary-vocab-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.culinary-story-box {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+}
+
+.culinary-story-box h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.culinary-story-box p.culinary-lead {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.food-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.food-item {
+  background: #faf6f0;
+  padding: 16px;
+  border-radius: 4px;
+  border-left: 3px solid var(--orange);
+}
+
+.food-item strong {
+  font-family: var(--serif);
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.food-item p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.food-tip-note {
+  background: #fdfaf5;
+  border: 1px dashed var(--orange);
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  color: #5f4e3c;
+  line-height: 1.55;
+}
+
+/* Vocab Box */
+.vocab-box {
+  background: #342225;
+  color: var(--white);
+  padding: 32px 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vocab-box::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.vocab-box .eyebrow {
+  color: #e3a47c;
+  margin-bottom: 8px;
+}
+
+.vocab-box h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 0 0 8px;
+  color: var(--white);
+}
+
+.vocab-box p.vocab-intro {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12.5px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vocab-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-radius: 4px;
+  transition: background .2s ease;
+}
+
+.vocab-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.vocab-term {
+  display: flex;
+  flex-direction: column;
+}
+
+.vocab-term strong {
+  font-size: 14px;
+  color: #f7ede2;
+  letter-spacing: .02em;
+}
+
+.vocab-term span {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.vocab-copy-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 10.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.vocab-copy-btn:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* --- INTERACTIVE CHECKLIST SECTION --- */
+.checklist-wrapper {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 36px 32px;
+  position: relative;
+}
+
+.checklist-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.checklist-head-row h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  margin: 0;
+  color: var(--ink);
+}
+
+.checklist-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checklist-counter-badge {
+  background: #f4eee5;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #e7ded0;
+}
+
+.checklist-reset-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.checklist-reset-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.checklist-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #f0eae0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.checklist-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), var(--orange));
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.checklist-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #faf7f2;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+  user-select: none;
+}
+
+.checklist-label:hover {
+  background: #f5efe6;
+  border-color: #d6c8b7;
+}
+
+.checklist-label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b7a99a;
+  border-radius: 3px;
+  background: var(--white);
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  transition: all .2s ease;
+}
+
+.checklist-label input[type="checkbox"]:checked {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.checklist-label input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.checklist-label.is-checked {
+  background: #f1ede4;
+  border-color: #cfc2b1;
+}
+
+.checklist-label.is-checked .check-title {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.check-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 3px;
+}
+
+.check-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* --- FAQ ACCORDION --- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: border-color .25s ease;
+}
+
+.faq-item.is-open {
+  border-color: var(--green);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f5efe6;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--green);
+  color: var(--white);
+}
+
+.faq-body {
+  padding: 0 24px 22px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+  display: none;
+  border-top: 1px dashed #ede5d8;
+  padding-top: 16px;
+}
+
+.faq-item.is-open .faq-body {
+  display: block;
+}
+
+/* --- EMERGENCY HOTLINE SECTION --- */
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.emergency-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.emergency-card-top {
+  margin-bottom: 16px;
+}
+
+.emergency-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.emergency-card h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.emergency-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.emergency-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #faf4ec;
+  border: 1px solid #ebd9c5;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.emergency-call-btn:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS FOR INFORMASI --- */
+@media (max-width: 980px) {
+  .info-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -30px;
+  }
+  .transport-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .etiquette-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .culinary-vocab-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .emergency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .info-stats-grid {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+  .transport-grid {
+    grid-template-columns: 1fr;
+  }
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+  .food-highlights {
+    grid-template-columns: 1fr;
+  }
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+  .checklist-wrapper {
+    padding: 24px 20px;
+  }
+  .faq-trigger {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+  .faq-body {
+    padding: 0 20px 18px;
+  }
+}

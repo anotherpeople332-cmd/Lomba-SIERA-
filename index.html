@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jelajahi pesona Yogyakarta: budaya, sejarah, kuliner, dan destinasi istimewa." />
+    <title>Jelajah Jogja — Cerita Istimewa di Setiap Sudut</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/navbar.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="hero hero-home">
+        <video
+          class="hero-home-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/images/malioboro.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/video/4k%20SESUATU%20DI%20JOGJA%20CINEMATIC%20VIDEO.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <svg class="hero-ornament" viewBox="0 0 360 360" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width=".8">
+            <circle cx="180" cy="180" r="44"></circle>
+            <circle cx="180" cy="180" r="72"></circle>
+            <circle cx="180" cy="180" r="112" stroke-dasharray="2 7"></circle>
+            <path
+              d="M180 31 200 104 273 87 236 151 302 180 236 209 273 273 200 256 180 329 160 256 87 273 124 209 58 180 124 151 87 87 160 104Z"
+            ></path>
+            <path d="M180 12V348M12 180H348M61 61 299 299M299 61 61 299"></path>
+            <path d="M180 100c26 20 26 60 0 80-26-20-26-60 0-80Zm0 80c26 20 26 60 0 80-26-20-26-60 0-80Z"></path>
+          </g>
+        </svg>
+        <div class="hero-content container">
+          <p class="eyebrow light-eyebrow">YOGYAKARTA, INDONESIA</p>
+          <h1 class="hero-title">
+            <span>Jelajahi Jogja</span>
+            <span><em>Dan Kenali Kisah di Baliknya.</em></span>
+          </h1>
+          <p class="hero-copy">
+            Temukan perjalanan yang lebih bermakna di kota yang selalu punya cara untuk membuatmu rindu.
+          </p>
+          <div class="hero-actions">
+            <a class="blob-btn" href="#pilihan">
+              <span class="blob-btn-label">Jelajahi destinasi <span aria-hidden="true">↗</span></span>
+              <span class="blob-btn-inner" aria-hidden="true">
+                <span class="blob-btn-blobs">
+                  <span class="blob-btn-blob"></span>
+                  <span class="blob-btn-blob"></span>
+                  <span class="blob-btn-blob"></span>
+                  <span class="blob-btn-blob"></span>
+                </span>
+              </span>
+            </a>
+            <a class="text-link light-link" href="sejarah.html">
+              Kenali Jogja
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="hero-note">
+            <span class="note-line"></span>
+            KOTA BUDAYA · SEJUTA KISAH
+          </div>
+        </div>
+        <a class="scroll-cue" href="#pilihan" aria-label="Gulir ke destinasi pilihan">
+          <span></span>
+          GULIR UNTUK MENJELAJAH
+        </a>
+      </section>
+
+      <svg class="blob-filter" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+              result="goo"
+            ></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+
+      <section class="intro-section section-space">
+        <div class="container intro-grid">
+          <div class="intro-label">
+            <span class="section-index">01 / TENTANG JOGJA</span>
+            <span class="small-rule"></span>
+          </div>
+          <div class="intro-copy">
+            <p class="eyebrow">LEBIH DARI SEKADAR TUJUAN</p>
+            <h2>
+              Tempat tradisi dan hari ini
+              <em>berjalan berdampingan.</em>
+            </h2>
+            <p>
+              Pagi dimulai dengan aroma kopi dan suara becak yang melintas. Siangnya menyusuri candi dan galeri,
+              malamnya menikmati angkringan, obrolan panjang, dan alasan untuk kembali.
+            </p>
+            <a class="text-link" href="sejarah.html">
+              Baca cerita tentang Jogja
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="text-link" href="destinasi/tugu-jogja.html">
+              Baca panduan Tugu Jogja
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="intro-stat">
+            <strong data-counter="3">03</strong>
+            <span>
+              HAL YANG SELALU
+              <br />
+              MENEMANIMU: BUDAYA,
+              <br />
+              RASA, DAN KERAMAHAN.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="destinations-section section-space" id="pilihan">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PILIHAN UNTUK PERJALANANMU</p>
+              <h2>
+                Mulai dari yang
+                <em>istimewa.</em>
+              </h2>
+            </div>
+            <a class="text-link" href="destinasi.html">
+              Jelajahi semua destinasi
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="destination-grid">
+            <a class="destination-card card-large reveal" href="destinasi/malioboro.html">
+              <img src="assets/images/malioboro.jpg" alt="Jalan Malioboro di Yogyakarta" />
+              <span class="card-number">01</span>
+              <span class="card-caption">
+                <small>KOTA · BELANJA · KULINER</small>
+                <strong>Malioboro</strong>
+                <span class="card-extra">Jalan santai, belanja, dan suasana malam kota.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+            <a class="destination-card reveal" href="destinasi/prambanan.html">
+              <img src="assets/images/Prambanan.jpg" alt="Candi Prambanan yang megah" />
+              <span class="card-number">02</span>
+              <span class="card-caption">
+                <small>WARISAN · SEJARAH</small>
+                <strong>Candi Prambanan</strong>
+                <span class="card-extra">Arsitektur candi dan kisah warisan budaya.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+            <a class="destination-card reveal" href="destinasi/keraton.html">
+              <img src="assets/images/Kraton%20jogja.jpg" alt="Bangunan bersejarah Keraton Yogyakarta" />
+              <span class="card-number">03</span>
+              <span class="card-caption">
+                <small>BUDAYA · KERATON</small>
+                <strong>Keraton Yogyakarta</strong>
+                <span class="card-extra">Mengenal tradisi dari pusat kebudayaan kota.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+            <a class="destination-card reveal" href="destinasi/taman-sari.html">
+              <img src="assets/images/Taman%20sari.jpg" alt="Kawasan bersejarah Taman Sari di Yogyakarta" />
+              <span class="card-number">04</span>
+              <span class="card-caption">
+                <small>ARSITEKTUR · SEJARAH</small>
+                <strong>Taman Sari</strong>
+                <span class="card-extra">Ruang bersejarah dengan lorong dan kolam.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+            <a class="destination-card card-wide reveal" href="destinasi/pinus-pengger.html">
+              <img src="assets/images/hutan%20pinus.jpg" alt="Hutan pinus Pengger yang teduh" />
+              <span class="card-number">05</span>
+              <span class="card-caption">
+                <small>ALAM · SENJA</small>
+                <strong>Hutan Pinus Pengger</strong>
+                <span class="card-extra">Menepi di antara pepohonan dan panorama perbukitan.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+            <a class="destination-card reveal" href="destinasi/titik-nol.html">
+              <img src="assets/images/Titik%20nol.jpg" alt="Suasana kawasan Titik Nol Kilometer Yogyakarta" />
+              <span class="card-number">06</span>
+              <span class="card-caption">
+                <small>KOTA · JALAN-JALAN</small>
+                <strong>Titik Nol Kilometer</strong>
+                <span class="card-extra">Jelajahi bangunan lama dan denyut pusat kota.</span>
+                <span class="card-arrow">↗</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="container quote-inner">
+          <span class="quote-mark">“</span>
+          <blockquote>
+            Jogja terbuat dari rindu,
+            <br />
+            pulang, dan
+            <em>angkringan.</em>
+          </blockquote>
+          <p>SEBUAH PERASAAN YANG SULIT DITERJEMAHKAN</p>
+        </div>
+      </section>
+
+      <section class="plan-section section-space">
+        <div class="container plan-grid">
+          <div>
+            <p class="eyebrow">PERJALANAN TANPA RIBET</p>
+            <h2>
+              Jelajahi dengan tenang.
+              <br />
+              <em>Nikmati setiap langkah.</em>
+            </h2>
+            <p class="body-copy">
+              Kenali kisah kota, temukan tujuan, lalu ikuti kabar terbaru dari Yogyakarta.
+            </p>
+            <a class="button button-dark" href="destinasi.html">
+              Lihat semua destinasi
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="plan-list">
+            <a href="sejarah.html">
+              <span>01</span>
+              <strong>Kenali ceritanya</strong>
+              <span class="list-arrow">↗</span>
+            </a>
+            <a href="galeri.html">
+              <span>02</span>
+              <strong>Cari inspirasinya</strong>
+              <span class="list-arrow">↗</span>
+            </a>
+            <a href="berita.html">
+              <span>03</span>
+              <strong>Baca kabar Jogja</strong>
+              <span class="list-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  --night: #30231f;
+  --night-soft: #3a2024;
+  --forest: #30231f;
+  --deep: #f7f1e7;
+  --ice: #f7f1e7;
+  --cream: #30231f;
+  --muted: #797069;
+  --gold: #b98c4e;
+  --copper: #b98c4e;
+  --burgundy: #6a2935;
+  --lime: #6a2935;
+  --line: rgba(48, 35, 31, .15);
+  --ink: #30231f;
+  --paper: #f7f1e7;
+  --green: #6a2935;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+html,
+body {
+  background: #f7f1e7;
+  color: #30231f;
+}
+.city-hero,
+.zoo-hero,
+.monument-hero {
+  background: radial-gradient(ellipse at 68% 47%, #5b3730 0, #3a2024 38%, #30231f 78%);
+  color: #f7f1e7;
+}
+.hero-theme-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(110deg, rgba(48, 35, 31, .68), rgba(58, 32, 36, .38) 56%, rgba(48, 35, 31, .5)),
+    linear-gradient(0deg, rgba(48, 35, 31, .34), transparent 68%);
+  pointer-events: none;
+}
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse at 72% 54%, rgba(185, 140, 78, .2), transparent 34%),
+    radial-gradient(ellipse at 87% 68%, rgba(106, 41, 53, .2), transparent 38%),
+    linear-gradient(180deg, rgba(58, 32, 36, .05) 42%, rgba(48, 35, 31, .94));
+}
+.canopy-grain {
+  background-image: radial-gradient(ellipse at 15% 16%, rgba(185, 140, 78, .35), transparent 27%), radial-gradient(ellipse at 88% 22%, rgba(185, 140, 78, .24), transparent 25%);
+}
+.brand-mark {
+  border-color: rgba(185, 140, 78, .65);
+  color: #b98c4e;
+}
+.brand-dot,
+.header-link span,
+.story-link span {
+  color: #b98c4e;
+}
+.header-link {
+  color: #f7f1e7;
+}
+.primary-button {
+  border-color: rgba(185, 140, 78, .65);
+  background: #6a2935;
+  color: #f7f1e7;
+  box-shadow: none;
+}
+.primary-button span {
+  color: #b98c4e;
+}
+.primary-button:hover {
+  border-color: #b98c4e;
+  background: #51232c;
+}
+.story-section,
+.habitats-section {
+  background: #f7f1e7;
+  color: #30231f;
+}
+.story-section::before,
+.habitats-section::before {
+  background: linear-gradient(90deg, transparent, rgba(185, 140, 78, .55), transparent);
+}
+.story-intro h2,
+.section-intro h2 {
+  color: #30231f;
+}
+.story-section .eyebrow,
+.habitats-section .eyebrow {
+  color: #6a2935;
+}
+.story-section .eyebrow-line,
+.habitats-section .eyebrow-line {
+  background: #b98c4e;
+  box-shadow: none;
+}
+.story-intro h2 em,
+.section-intro h2 em {
+  color: #6a2935;
+}
+.story-copy,
+.section-intro > p:last-child {
+  color: #797069;
+}
+.story-copy p,
+.landmark-list p,
+.habitat-card i {
+  color: #797069;
+}
+.landmark-list article > span,
+.habitat-card > span {
+  color: #6a2935;
+}
+.landmark-list article,
+.habitat-card {
+  border-color: rgba(48, 35, 31, .15);
+}
+.habitat-card {
+  background: rgba(255, 255, 255, .55);
+}
+.landmark-list h3,
+.habitat-card strong {
+  color: #30231f;
+}
+.story-link {
+  color: #6a2935;
+}
+.story-footer,
+.section-footer {
+  border-color: rgba(48, 35, 31, .15);
+  color: #797069;
+}
+.story-footer a,
+.section-footer a {
+  color: #6a2935;
+}
+.care-note {
+  color: #797069;
+}
+@media (max-width: 760px) {
+  .animal-nav {
+    border-color: rgba(247, 241, 231, .3);
+    background: rgba(48, 35, 31, .88);
+  }
+}

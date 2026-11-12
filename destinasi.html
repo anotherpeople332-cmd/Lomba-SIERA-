@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cari dan jelajahi semua destinasi pilihan di Yogyakarta." />
+    <title>Jelajahi Destinasi — Jelajah Jogja</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/directory.css" />
+    <script src="js/navbar.js" defer></script>
+    <script src="js/directory.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero directory-hero">
+        <div class="hero-shade"></div>
+        <div class="container page-hero-content">
+          <p class="eyebrow light-eyebrow">10 TEMPAT · BANYAK CERITA</p>
+          <h1>
+            Temukan tempat
+            <br />
+            yang terasa
+            <em>seperti Jogja.</em>
+          </h1>
+          <p>Dari sudut kota hingga ruang alam, pilih destinasi yang paling ingin kamu jelajahi.</p>
+        </div>
+      </section>
+
+      <section class="section-space directory-section" aria-labelledby="directory-title">
+        <div class="container">
+          <div class="directory-heading">
+            <div>
+              <p class="eyebrow">PETA KECIL UNTUK RASA INGIN TAHU</p>
+              <h2 id="directory-title">
+                Semua destinasi,
+                <br />
+                <em>lebih mudah ditemukan.</em>
+              </h2>
+            </div>
+            <p class="directory-description">
+              Cari berdasarkan nama atau suasana. Setiap kartu akan membawamu ke panduan lengkap tempat tersebut.
+            </p>
+          </div>
+
+          <div class="directory-toolbar">
+            <label class="destination-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                <path d="m16 16 5 5"></path>
+              </svg>
+              <span class="visually-hidden">Cari destinasi</span>
+              <input
+                id="destination-search"
+                type="search"
+                placeholder="Cari Malioboro, alam, sejarah..."
+                autocomplete="off"
+              />
+              <kbd>/</kbd>
+            </label>
+            <p class="directory-count" id="directory-count" aria-live="polite">Menampilkan 10 destinasi</p>
+          </div>
+
+          <div class="directory-filters" role="group" aria-label="Filter kategori destinasi">
+            <button type="button" class="directory-filter is-active" data-filter="semua" aria-pressed="true">
+              Semua
+              <span>10</span>
+            </button>
+            <button type="button" class="directory-filter" data-filter="kota" aria-pressed="false">Kota</button>
+            <button type="button" class="directory-filter" data-filter="budaya" aria-pressed="false">Budaya</button>
+            <button type="button" class="directory-filter" data-filter="sejarah" aria-pressed="false">Sejarah</button>
+            <button type="button" class="directory-filter" data-filter="alam" aria-pressed="false">Alam</button>
+            <button type="button" class="directory-filter" data-filter="keluarga" aria-pressed="false">Keluarga</button>
+          </div>
+
+          <div class="directory-grid">
+            <a
+              class="directory-card reveal"
+              href="destinasi/malioboro.html"
+              data-category="kota"
+              data-search="malioboro jalan kota belanja kuliner malam"
+            >
+              <img src="assets/images/malioboro.jpg" alt="Suasana jalan di Malioboro, Yogyakarta" loading="lazy" />
+              <span class="directory-number">01 / KOTA</span>
+              <span class="directory-card-copy">
+                <small>KOTA · BELANJA · KULINER</small>
+                <strong>Malioboro</strong>
+                <span>Jalan santai dan suasana malam kota.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/prambanan.html"
+              data-category="sejarah"
+              data-search="candi prambanan warisan sejarah arsitektur"
+            >
+              <img src="assets/images/Prambanan.jpg" alt="Bangunan Candi Prambanan di Yogyakarta" loading="lazy" />
+              <span class="directory-number">02 / SEJARAH</span>
+              <span class="directory-card-copy">
+                <small>WARISAN · ARSITEKTUR</small>
+                <strong>Candi Prambanan</strong>
+                <span>Kisah batu dan legenda yang menjulang.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/keraton.html"
+              data-category="budaya"
+              data-search="keraton yogyakarta budaya tradisi kerajaan"
+            >
+              <img src="assets/images/Kraton%20jogja.jpg" alt="Detail arsitektur Keraton Yogyakarta" loading="lazy" />
+              <span class="directory-number">03 / BUDAYA</span>
+              <span class="directory-card-copy">
+                <small>BUDAYA · TRADISI</small>
+                <strong>Keraton Yogyakarta</strong>
+                <span>Mengenal tradisi dari pusat kebudayaan kota.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/taman-sari.html"
+              data-category="sejarah"
+              data-search="taman sari arsitektur sejarah taman kerajaan"
+            >
+              <img src="assets/images/Taman%20sari.jpg" alt="Kawasan bersejarah Taman Sari" loading="lazy" />
+              <span class="directory-number">04 / SEJARAH</span>
+              <span class="directory-card-copy">
+                <small>ARSITEKTUR · SEJARAH</small>
+                <strong>Taman Sari</strong>
+                <span>Jejak taman kerajaan dan lorong bersejarah.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/titik-nol.html"
+              data-category="kota"
+              data-search="titik nol kilometer pusat kota jalan bangunan lama"
+            >
+              <img
+                src="assets/images/Titik%20nol.jpg"
+                alt="Suasana kawasan Titik Nol Kilometer Yogyakarta"
+                loading="lazy"
+              />
+              <span class="directory-number">05 / KOTA</span>
+              <span class="directory-card-copy">
+                <small>KOTA · JALAN-JALAN</small>
+                <strong>Titik Nol Kilometer</strong>
+                <span>Bangunan lama dan denyut pusat kota.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/tugu-jogja.html"
+              data-category="kota"
+              data-search="tugu jogja yogyakarta landmark monumen ikon kota"
+            >
+              <img
+                src="assets/images/tugu%20jogja.jpg"
+                alt="Tugu Yogyakarta di persimpangan jalan"
+                loading="lazy"
+              />
+              <span class="directory-number">06 / IKON</span>
+              <span class="directory-card-copy">
+                <small>IKON · LANDMARK</small>
+                <strong>Tugu Jogja</strong>
+                <span>Penanda kota yang selalu dirindukan.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/pinus-pengger.html"
+              data-category="alam"
+              data-search="hutan pinus pengger alam senja perbukitan"
+            >
+              <img src="assets/images/hutan%20pinus.jpg" alt="Pepohonan pinus di Hutan Pinus Pengger" loading="lazy" />
+              <span class="directory-number">07 / ALAM</span>
+              <span class="directory-card-copy">
+                <small>ALAM · SENJA</small>
+                <strong>Hutan Pinus Pengger</strong>
+                <span>Menepi di antara pepohonan dan bukit.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/gembira-loka.html"
+              data-category="keluarga"
+              data-search="gembira loka kebun binatang satwa keluarga"
+            >
+              <img
+                src="assets/images/Gembira%20loka%20zoo.jpg"
+                alt="Papan Gembira Loka Zoo dan iguana"
+                loading="lazy"
+              />
+              <span class="directory-number">08 / KELUARGA</span>
+              <span class="directory-card-copy">
+                <small>KELUARGA · SATWA</small>
+                <strong>Gembira Loka</strong>
+                <span>Belajar mengenal satwa sambil bermain.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/tebing-breksi.html"
+              data-category="alam"
+              data-search="tebing breksi geologi panorama alam batu"
+            >
+              <img
+                src="assets/images/tebing%20breksi.jpg"
+                alt="Ukiran batu dan tangga di Tebing Breksi"
+                loading="lazy"
+              />
+              <span class="directory-number">09 / ALAM</span>
+              <span class="directory-card-copy">
+                <small>GEOLOGI · PANORAMA</small>
+                <strong>Tebing Breksi</strong>
+                <span>Lanskap batu yang dibentuk alam dan waktu.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="directory-card reveal"
+              href="destinasi/benteng-vredeburg.html"
+              data-category="sejarah"
+              data-search="benteng vredeburg museum sejarah perjuangan"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Fort_Vredeburg%2C_Yogyakarta%2C_Indonesia.JPG/960px-Fort_Vredeburg%2C_Yogyakarta%2C_Indonesia.JPG"
+                alt="Bagian luar Museum Benteng Vredeburg di Yogyakarta"
+                loading="lazy"
+              />
+              <span class="directory-number">10 / SEJARAH</span>
+              <span class="directory-card-copy">
+                <small>MUSEUM · SEJARAH</small>
+                <strong>Benteng Vredeburg</strong>
+                <span>Membaca jejak sejarah di tengah kota.</span>
+              </span>
+              <span class="directory-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="directory-empty" id="directory-empty" hidden>
+            Tidak ada destinasi yang cocok. Coba kata kunci atau kategori lain.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+.directory-hero {
+  background-image: linear-gradient(90deg, rgba(42,25,26,.77), rgba(42,25,26,.18)), linear-gradient(0deg, rgba(30,20,19,.4), transparent 60%), url('https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=2000&q=85');
+  background-position: center 52%;
+}
+.directory-hero h1 {
+  max-width: 760px;
+}
+.directory-hero .page-hero-content > p:last-child {
+  max-width: 430px;
+}
+.directory-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 38px;
+  margin-bottom: 38px;
+}
+.directory-heading h2 {
+  margin-bottom: 0;
+}
+.directory-description {
+  max-width: 340px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.directory-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0 14px;
+  border-top: 1px solid var(--line);
+}
+.destination-search {
+  display: flex;
+  width: min(440px, 100%);
+  min-height: 48px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 13px;
+  border: 1px solid #d9cdbd;
+  background: rgba(255,255,255,.52);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.destination-search:focus-within {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(185,140,78,.12);
+}
+.destination-search svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--muted);
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+.destination-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 400 12px var(--sans);
+}
+.destination-search input::placeholder {
+  color: #948c83;
+}
+.destination-search kbd {
+  display: grid;
+  width: 22px;
+  height: 23px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #ddd3c5;
+  color: var(--muted);
+  font: 10px var(--sans);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.directory-count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.directory-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.directory-filter {
+  display: inline-flex;
+  min-height: 36px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid #ddd3c5;
+  background: transparent;
+  color: #71685f;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.directory-filter:hover, .directory-filter.is-active {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--white);
+}
+.directory-filter span {
+  color: #e2c99e;
+  font-size: 9px;
+}
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.directory-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 325px;
+  overflow: hidden;
+  background: #4a4b43;
+  color: white;
+  isolation: isolate;
+}
+.directory-card[hidden] {
+  display: none;
+}
+.directory-card::before {
+  position: absolute;
+  z-index: 1;
+  inset: 9px;
+  border: 1px solid rgba(218,187,124,0);
+  content: "";
+  pointer-events: none;
+  transition: inset .3s ease, border-color .3s ease;
+}
+.directory-card::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20,18,17,.88), rgba(20,18,17,.05) 72%);
+  content: "";
+  transition: opacity .3s ease;
+}
+.directory-card img {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .75s cubic-bezier(.2,.7,.2,1);
+}
+.directory-number {
+  position: absolute;
+  z-index: 2;
+  top: 21px;
+  left: 22px;
+  color: rgba(255,255,255,.85);
+  font-size: 8px;
+  letter-spacing: .16em;
+}
+.directory-card-copy {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 23px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(3px);
+  transition: transform .3s ease;
+}
+.directory-card-copy small {
+  color: #e5b48f;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+.directory-card-copy strong {
+  margin-top: 5px;
+  font: 500 25px/1.2 var(--serif);
+}
+.directory-card-copy > span {
+  max-width: 260px;
+  margin-top: 7px;
+  color: rgba(255,255,255,.78);
+  font-size: 10px;
+}
+.directory-arrow {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 26px;
+  color: #e2a47e;
+  font-size: 18px;
+  transition: transform .25s ease;
+}
+.directory-card:hover img, .directory-card:focus-visible img {
+  transform: scale(1.055);
+}
+.directory-card:hover::before, .directory-card:focus-visible::before {
+  inset: 12px;
+  border-color: rgba(218,187,124,.8);
+}
+.directory-card:hover .directory-card-copy, .directory-card:focus-visible .directory-card-copy {
+  transform: translateY(-5px);
+}
+.directory-card:hover .directory-arrow, .directory-card:focus-visible .directory-arrow {
+  transform: translate(3px,-3px);
+}
+.directory-empty {
+  margin: 26px 0 0;
+  padding: 28px;
+  border: 1px dashed #cfc2b1;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .directory-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .directory-description {
+    max-width: 520px;
+  }
+}
+@media (max-width: 540px) {
+  .directory-hero {
+    min-height: 475px;
+    padding-bottom: 50px;
+    background-position: 58% center;
+  }
+  .directory-hero h1 {
+    font-size: clamp(42px, 11vw, 58px);
+  }
+  .directory-heading {
+    margin-bottom: 25px;
+  }
+  .directory-toolbar {
+    align-items: start;
+    flex-direction: column;
+  }
+  .destination-search {
+    width: 100%;
+  }
+  .directory-count {
+    align-self: end;
+  }
+  .directory-filters {
+    margin-right: -17px;
+    padding-bottom: 5px;
+  }
+  .directory-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .directory-card {
+    min-height: 255px;
+  }
+  .directory-card-copy strong {
+    font-size: 23px;
+  }
+}

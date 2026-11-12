@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Galeri foto suasana, budaya, dan destinasi wisata Yogyakarta." />
+    <title>Galeri — Jelajah Jogja</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/navbar.js" defer></script>
+    <script src="js/gallery-animation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero gallery-hero">
+        <div class="hero-shade"></div>
+        <div class="container page-hero-content">
+          <p class="eyebrow light-eyebrow">SECUIL SUASANA UNTUK DIBAWA PULANG</p>
+          <h1>
+            Jogja, dalam
+            <br />
+            <em>potongan cerita.</em>
+          </h1>
+          <p>Jeda sebentar, lihat lebih dekat. Mungkin satu foto bisa menjadi alasan perjalanan berikutnya.</p>
+        </div>
+      </section>
+      <section class="section-space gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">JELAJAHI MELALUI GAMBAR</p>
+              <h2>
+                Setiap bingkai punya
+                <em>rasa.</em>
+              </h2>
+            </div>
+            <p class="gallery-hint">
+              Pilih foto untuk melihat lebih dekat
+              <span>↘</span>
+            </p>
+          </div>
+          <div class="gallery-filters" role="group" aria-label="Filter foto galeri">
+            <button class="gallery-filter is-active" type="button" data-filter="all" aria-pressed="true">Semua</button>
+            <button class="gallery-filter" type="button" data-filter="kota" aria-pressed="false">Kota</button>
+            <button class="gallery-filter" type="button" data-filter="warisan" aria-pressed="false">Warisan</button>
+            <button class="gallery-filter" type="button" data-filter="alam" aria-pressed="false">Alam</button>
+          </div>
+          <div class="gallery-grid">
+            <button
+              class="gallery-item gallery-tall"
+              data-category="kota"
+              data-full="assets/images/Galeri%204.webp"
+              data-caption="Tugu Yogyakarta menjelang senja"
+            >
+              <img
+                src="assets/images/Galeri%204.webp"
+                alt="Tugu Yogyakarta di tengah suasana senja"
+                loading="lazy"
+              />
+              <span>01 · SUDUT KOTA</span>
+            </button>
+            <button
+              class="gallery-item"
+              data-category="warisan"
+              data-full="assets/images/Galeri%201.jpg"
+              data-caption="Candi Prambanan"
+            >
+              <img
+                src="assets/images/Galeri%201.jpg"
+                alt="Kompleks Candi Prambanan"
+                loading="lazy"
+              />
+              <span>02 · WARISAN</span>
+            </button>
+            <button
+              class="gallery-item"
+              data-category="alam"
+              data-full="assets/images/Galeri%203.jpg"
+              data-caption="Pemandangan perbukitan dari Hutan Pinus Pengger"
+            >
+              <img
+                src="assets/images/Galeri%203.jpg"
+                alt="Pemandangan perbukitan dan gardu pandang di Hutan Pinus Pengger"
+                loading="lazy"
+              />
+              <span>03 · ALAM</span>
+            </button>
+            <button
+              class="gallery-item"
+              data-category="kota"
+              data-full="assets/images/galeri%206.jpg"
+              data-caption="Suasana kawasan Titik Nol Kilometer"
+            >
+              <img
+                src="assets/images/galeri%206.jpg"
+                alt="Suasana bangunan dan lalu lintas di kawasan Titik Nol Kilometer"
+                loading="lazy"
+              />
+              <span>04 · SENJA</span>
+            </button>
+            <button
+              class="gallery-item gallery-wide"
+              data-category="warisan"
+              data-full="assets/images/Galeri%204.webp"
+              data-caption="Tugu Yogyakarta, salah satu ikon kota"
+            >
+              <img
+                src="assets/images/Galeri%204.webp"
+                alt="Tugu Yogyakarta sebagai ikon kota"
+                loading="lazy"
+              />
+              <span>05 · BUDAYA</span>
+            </button>
+            <button
+              class="gallery-item"
+              data-category="alam"
+              data-full="assets/images/Galeri%202.jpg"
+              data-caption="Kura-kura di Gembira Loka Zoo"
+            >
+              <img
+                src="assets/images/Galeri%202.jpg"
+                alt="Kura-kura di area satwa Gembira Loka Zoo"
+                loading="lazy"
+              />
+              <span>06 · SATWA</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tampilan foto">
+        <button class="lightbox-close" aria-label="Tutup foto">×</button>
+        <button class="lightbox-prev" aria-label="Foto sebelumnya">←</button>
+        <figure>
+          <img src="" alt="" />
+          <figcaption></figcaption>
+        </figure>
+        <button class="lightbox-next" aria-label="Foto berikutnya">→</button>
+      </div>
+    </main>
+    <div data-site-footer></div>
+  </body>
+</html>
