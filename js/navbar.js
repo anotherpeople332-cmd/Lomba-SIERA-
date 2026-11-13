@@ -26,7 +26,6 @@
           <ul class="nav-links" id="primary-navigation">
             ${pageLinks}
             <li><a href="${base}destinasi.html"${isDestinationPage ? ' aria-current="page"' : ''}>Destinasi</a></li>
-            <li><a href="${base}sejarah-sultan.html"${currentFile === 'sejarah-sultan.html' ? ' aria-current="page"' : ''}>Sejarah Sultan</a></li>
           </ul>
         </nav>
       </header>`;
@@ -70,7 +69,6 @@
           <div><p class="footer-heading">JELAJAHI</p><div class="footer-links">
             ${pages.map(([label, file]) => `<a href="${base}${file}">${label}</a>`).join('')}
             <a href="${base}destinasi.html">Destinasi</a>
-            <a href="${base}sejarah-sultan.html">Sejarah Sultan</a>
           </div></div>
           <div><p class="footer-heading">SEBUAH CATATAN</p><p class="footer-about"><span>Hormati budaya setempat, jaga kebersihan, dan periksa informasi resmi sebelum berkunjung.</span></p></div>
         </div>

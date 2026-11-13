@@ -517,12 +517,6 @@ h2 {
 .destination-card:hover img {
   transform: scale(1.055);
 }
-.card-large {
-  grid-row: span 2;
-}
-.card-wide {
-  grid-column: span 2;
-}
 .card-number {
   position: absolute;
   z-index: 1;

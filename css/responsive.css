@@ -151,12 +151,6 @@
     grid-auto-rows: 210px;
     gap: 10px;
   }
-  .card-large {
-    grid-row: span 1;
-  }
-  .card-wide {
-    grid-column: span 2;
-  }
   .card-caption {
     right: 12px;
     bottom: 13px;
