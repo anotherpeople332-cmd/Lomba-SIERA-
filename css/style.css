@@ -921,12 +921,6 @@ h2 {
   font-size: 9px;
   letter-spacing: .15em;
 }
-.gallery-tall {
-  grid-row: span 2;
-}
-.gallery-wide {
-  grid-column: span 2;
-}
 .lightbox {
   position: fixed;
   z-index: 30;

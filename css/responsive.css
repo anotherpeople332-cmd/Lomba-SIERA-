@@ -216,12 +216,6 @@
     grid-auto-rows: 190px;
     gap: 10px;
   }
-  .gallery-tall {
-    grid-row: span 2;
-  }
-  .gallery-wide {
-    grid-column: span 2;
-  }
   .lightbox {
     padding: 60px 48px;
   }
