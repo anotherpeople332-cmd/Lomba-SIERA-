@@ -173,7 +173,7 @@ button:focus-visible, a:focus-visible {
   padding: 0 17px;
   border: 1px solid rgba(185, 140, 78, .58);
   background: linear-gradient(110deg, rgba(106, 41, 53, .82), rgba(58, 32, 36, .78));
-  color: var(--ice);
+  color: var(--night);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: .13em;
@@ -364,7 +364,7 @@ button:focus-visible, a:focus-visible {
 .story-copy h3,
 .story-conclusion h3 {
   margin: 0 0 9px;
-  color: var(--ice);
+  color: var(--night);
   font: 500 17px var(--serif);
 }
 .story-copy h3:not(:first-child) {
