@@ -346,6 +346,15 @@ button:focus-visible, a:focus-visible {
   color: var(--copper);
   font-style: italic;
 }
+.story-monument-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-top: 27px;
+  border: 1px solid var(--line);
+  object-fit: cover;
+  object-position: center 52%;
+}
 .story-copy {
   align-self: start;
   max-width: 420px;
