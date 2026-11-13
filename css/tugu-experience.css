@@ -349,6 +349,7 @@ button:focus-visible, a:focus-visible {
 .story-monument-photo {
   display: block;
   width: 100%;
+  max-width: 360px;
   aspect-ratio: 4 / 5;
   margin-top: 27px;
   border: 1px solid var(--line);
